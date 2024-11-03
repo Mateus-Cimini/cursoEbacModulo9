@@ -12,6 +12,8 @@ $(document).ready(function() {
     })
 
     $('#btnCancel').click(function() {
+        console.log('recolher formulario');
+        
         $('form').slideUp();
     })
 
