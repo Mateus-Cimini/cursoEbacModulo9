@@ -13,7 +13,7 @@ $(document).ready(function() {
                 <button class="trash"><i class="fas fa-trash"></i></button></p>
             `).appendTo(novoItem);
         $(novoItem).appendTo('ul');
-        $('#inputTask').val(' ');
+        $('#inputTask').val('');
         
     });
 
