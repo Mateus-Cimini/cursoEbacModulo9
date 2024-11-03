@@ -1,3 +1,19 @@
 $(document).ready(function() {
-    console.log('carregou');
+    console.log(document.querySelector('header button'));
+    console.log($('#btnCancel'));
+    
+    document.querySelector('header button').addEventListener('click', function() {
+
+    })
+
+
+    $('header button').click(function() {
+        console.log('Expandir formulario');
+    })
+
+
+    $('form').on('submit', function(e) {
+        console.log('clicou em adicionar');
+        e.preventDefault();
+    })
 })
