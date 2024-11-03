@@ -25,7 +25,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 16px 0px;
-    border-bottom: 16px solid --highlight-color;
+    border-bottom: 16px solid #1a202c;
     text-transform: uppercase;
     font-style: italic;
     gap: 20px;
@@ -85,7 +85,7 @@ form input {
 
 #btnAdd:hover {
     background-color: var(--btn-add-hover-color);
-    transition: 0.3s;
+    transition: all ease 0.3s;
 }
 
 #btnCancel {
@@ -95,4 +95,41 @@ form input {
 #btnCancel:hover {
     background-color: var(--btn-cancel-hover-color);
     transition: 0.3s;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-height: 225px;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-img-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.overlay-img-link a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+ul li:hover .overlay-img-link {
+    opacity: 1;
 }

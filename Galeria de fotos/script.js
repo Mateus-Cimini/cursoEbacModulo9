@@ -6,20 +6,32 @@ $(document).ready(function() {
 
     })
 
+    // ativa ao clicar em nova imagem
     $('header button').click(function() {
-        console.log('Expandir formulario');
         $('form').slideDown();
     })
 
+    //ativa ao clicar em cancelar
     $('#btnCancel').click(function() {
-        console.log('recolher formulario');
         
         $('form').slideUp();
     })
 
+    //ativa ao clicar em adicionar
     $('form').on('submit', function(e) {
-        console.log('clicou em adicionar');
         e.preventDefault();
-
+        const enderecoImg = $('#inputUrl').val();
+        const novoItem = $('<li style="display: none"></li>');
+        $(`<img src="${enderecoImg}" />`).appendTo(novoItem);
+        $(`
+            <div class="overlay-img-link">
+                <a href="${enderecoImg}" title="Abrir imagem num novo separador" target="_blank">
+                Abrir imagem num novo separador
+                </a>
+            </div>    
+        `).appendTo(novoItem);
+        $(novoItem).appendTo('ul');
+        $(novoItem).fadeIn(1000)
+        $('#inputUrl').val('')
     })
 })
